@@ -1,0 +1,5 @@
+{
+  "name": "retroRacer",
+  "description": "A high-octane retro-futuristic racing game built with React and Canvas.",
+  "requestFramePermissions": []
+}

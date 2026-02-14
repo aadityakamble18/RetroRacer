@@ -1,0 +1,55 @@
+{
+  "name": "retroracer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A high-octane retro-futuristic racing game.",
+  "author": "Aadit",
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:start": "electron .",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.voidracer.app",
+    "productName": "retroRacer",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "main.cjs",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "retroRacer"
+    }
+  },
+  "dependencies": {
+    "lucide-react": "^0.564.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^40.4.1",
+    "electron-builder": "^26.7.0",
+    "electron-packager": "^17.1.2",
+    "electron-winstaller": "^5.4.0",
+    "png-to-ico": "^3.0.1",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
