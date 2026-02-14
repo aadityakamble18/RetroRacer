@@ -1,6 +1,5 @@
 # 🏎️ retroRacer
 
-![retroRacer Banner](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
 
 **retroRacer** is a high-speed, retro-futuristic arcade racer that blends modern web technologies with the gritty aesthetic of 80s cyberpunk terminals. Built for both enthusiasts and developers, it offers a seamless blend of high-performance canvas rendering and a robust React-based UI.
 
