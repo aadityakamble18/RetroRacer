@@ -44,9 +44,10 @@ retroRacer/
 │   └── TerminalMenu.tsx   # The "OS" style menu system & boot sequence
 ├── utils/                 # Helper functions
 │   └── audio.ts           # Global AudioManager (SFX and UI clicks)
-├── release/               # Compiled binaries
+├── release/               # Compiled binaries (stored via Git LFS)
 │   ├── RetroRacer-win32-x64/ # Portable executable folder
-│   └── installer/         # SetupExe for Windows installations
+│   ├── installer/         # SetupExe for Windows installations
+│   └── RetroRacer-Portable.zip # Compressed portable version
 ├── constants.ts           # Game balance (Speed, gravity, obstacle density)
 ├── types.ts               # Shared TypeScript interfaces & GameStates
 ├── main.cjs               # Electron main process (Window management)
@@ -83,40 +84,51 @@ Game state (MENU -> PLAYING -> GAME_OVER) is managed through React's Context/Sta
 
 ## 📥 Downloads & Installation
 
-### For Players (Windows)
-The easiest way to play is to download the latest installer from the **[Releases](https://github.com/aadityakamble18/RetroRacer/releases)** page.
+You can download the game directly from this repository or the **[Releases](https://github.com/aadityakamble18/RetroRacer/releases)** page.
 
-1.  **Standard Installer**: Download `RetroRacerSetup.exe` and run it for a guided installation.
-2.  **Portable / Custom Installer**: 
-    - Download `RetroRacer-Portable.zip`.
-    - Extract it.
-    - Right-click `Install-retroRacer.ps1` and choose **"Run with PowerShell"** to set up custom shortcuts and installation paths.
+### 1. Standard Guided Installation
+*Recommended for most users.*
+1.  Navigate to the `release/installer/` folder in this repo.
+2.  Download and run **`RetroRacerSetup.exe`**.
+3.  Follow the on-screen instructions to install the game.
 
-### For Web Play (Deployment)
-This game is fully compatible with **Vercel** or **Netlify**. Simply push to GitHub and link the repository; the `npm run build` command handles the rest.
+### 2. Custom PowerShell Installer
+*Use this for custom installation paths and automatic desktop shortcuts.*
+1.  Navigate to the `release/` folder and download **`RetroRacer-Portable.zip`**.
+2.  Extract the zip file to your preferred location.
+3.  Right-click the **`Install-retroRacer.ps1`** script (in the project root) and select **"Run with PowerShell"**.
+4.  The script will ask you where to install the files and if you want to create Desktop and Start Menu shortcuts.
 
-### For Developers (Command Line)
+### 3. Portable Execution
+1.  Download and extract **`RetroRacer-Portable.zip`**.
+2.  Open the `RetroRacer-win32-x64` folder.
+3.  Launch **`retroRacer.exe`** directly—no installation required!
+
+---
+
+## 👨‍💻 Developer Guide
+
 ```bash
-# Clone and enter directory
-git clone https://github.com/your-username/retroRacer.git
+# Clone the repository
+git clone https://github.com/aadityakamble18/RetroRacer.git
 cd retroRacer
 
-# Install the engine
+# Install dependencies
 npm install
 
-# Start development drive
+# Start development mode
 npm run dev
 
-# Pack into a Windows .exe
+# Build the production executable
 npm run electron:build
 ```
 
 ---
 
 ## 🎨 Creative Credits
-- **Art Direction**: Retro-Terminal / Cyberpunk 2077 influenced.
-- **Icons**: Custom Helmet Logo provided by the community.
-- **Sound**: Procedural UI blips and synthesized engine hums.
+- **Art Direction**: Inspired by 80s terminal aesthetic and cyberpunk visuals.
+- **Icons**: Custom Helmet Logo.
+- **Sound**: Procedural sound effects and synthesized engine loops.
 
 ---
 *Developed for the Void. Bound by no law but Physics.*
