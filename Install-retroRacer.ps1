@@ -1,6 +1,6 @@
 # retroRacer - Custom Installer
 Add-Type -AssemblyName System.Windows.Forms
-$AppSource = Join-Path $PSScriptRoot "release\retroRacer-win32-x64"
+$AppSource = Join-Path $PSScriptRoot "release\RetroRacer-win32-x64"
 $IconPath = Join-Path $PSScriptRoot "build\icon.png"
 
 # 1. Ask for Installation Location
