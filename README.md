@@ -45,7 +45,7 @@ retroRacer/
 ├── utils/                 # Helper functions
 │   └── audio.ts           # Global AudioManager (SFX and UI clicks)
 ├── release/               # Compiled binaries
-│   ├── retroRacer-win32/  # Portable executable folder
+│   ├── RetroRacer-win32-x64/ # Portable executable folder
 │   └── installer/         # SetupExe for Windows installations
 ├── constants.ts           # Game balance (Speed, gravity, obstacle density)
 ├── types.ts               # Shared TypeScript interfaces & GameStates
@@ -81,12 +81,16 @@ Game state (MENU -> PLAYING -> GAME_OVER) is managed through React's Context/Sta
 
 ---
 
-## 🚀 Installation & Deployment
+## 📥 Downloads & Installation
 
-### For General Players (Windows)
-1. **The Installer path**: Find `Install-retroRacer.ps1`.
-2. **Setup**: Right-click it and choose **"Run with PowerShell"**.
-3. **Customize**: Choose your installation folder and decide if you want desktop shortcuts.
+### For Players (Windows)
+The easiest way to play is to download the latest installer from the **[Releases](https://github.com/aadityakamble18/RetroRacer/releases)** page.
+
+1.  **Standard Installer**: Download `RetroRacerSetup.exe` and run it for a guided installation.
+2.  **Portable / Custom Installer**: 
+    - Download `RetroRacer-Portable.zip`.
+    - Extract it.
+    - Right-click `Install-retroRacer.ps1` and choose **"Run with PowerShell"** to set up custom shortcuts and installation paths.
 
 ### For Web Play (Deployment)
 This game is fully compatible with **Vercel** or **Netlify**. Simply push to GitHub and link the repository; the `npm run build` command handles the rest.
