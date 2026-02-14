@@ -16,6 +16,23 @@ In a digital void where speed is survival, Player 1 and Player 2 pilot neon-infu
 
 ---
 
+## 🎮 Play Online
+
+**Try it now in your browser!** No installation required.
+
+🔗 **[Play RetroRacer Online](https://retroracer.vercel.app)**
+
+The web version features the full game experience with:
+- ✅ Single-player and multiplayer modes
+- ✅ Full canvas rendering with CRT effects
+- ✅ Procedurally generated obstacles
+- ✅ Web Audio API synthesized soundtrack
+- ✅ Responsive controls (keyboard)
+
+*Note: For the native desktop experience with system-level optimizations, see the [Downloads & Installation](#-downloads--installation) section below.*
+
+---
+
 ## 🏗️ Technical Architecture & Stack
 
 The game utilizes a "Hybrid-Engine" approach, separating the simulation from the interface to ensure 60FPS performance even during intense action.
